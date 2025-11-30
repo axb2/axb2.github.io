@@ -1,66 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Johnson - Legal</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        .container {
-            text-align: center;
-            background: #1e1e1e;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
-            max-width: 400px;
-            width: 90%;
-        }
-        h1 {
-            color: #ffffff;
-            margin-bottom: 2rem;
-            font-size: 2rem;
-            font-weight: 700;
-        }
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-        }
-        a {
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 1.1rem;
-            padding: 14px 24px;
-            background-color: #2c2c2c;
-            border: 1px solid #333;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        a:hover {
-            background-color: #007bff;
-            border-color: #007bff;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,123,255,0.3);
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Mr. Johnson – Privacy Policy & Terms of Service</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card-bg: #ffffff;
+      --text: #222222;
+      --accent: #0e6e6d;
+      --muted: #666666;
+      --border: #dddddd;
+      --code-bg: #f0f0f0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #fdfdfd, #f2f2f6);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2rem 1.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    header p {
+      margin: 0.25rem 0;
+      color: var(--muted);
+    }
+
+    .tagline {
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .pill {
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      margin-top: 1.25rem;
+      margin-bottom: 0.3rem;
+    }
+
+    p {
+      margin: 0.4rem 0;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+      margin: 0.3rem 0 0.7rem;
+    }
+
+    li {
+      margin: 0.2rem 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .notice {
+      font-size: 0.85rem;
+      color: var(--muted);
+      background: #fff8e1;
+      border-left: 4px solid #ffb300;
+      padding: 0.75rem 0.9rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .section-anchor {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.1rem;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    code {
+      background: var(--code-bg);
+      padding: 0.1rem 0.3rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      header {
+        padding-top: 1.5rem;
+      }
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+      padding: 1.5rem 1rem 2rem;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Mr. Johnson</h1>
-        <div class="links">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-and-conditions.html">Terms & Conditions</a>
-        </div>
+  <header>
+    <h1>Mr. Johnson</h1>
+    <p class="tagline">Legal Information – Privacy Policy &amp; Terms of Service</p>
+    <p>Operated by <strong>Rainyday Apps</strong></p>
+  </header>
+
+  <main>
+    <div class="card">
+      <div class="pill-row">
+        <span class="pill">GDPR-Friendly</span>
+        <span class="pill">App Store Compliant</span>
+        <span class="pill">Last updated: 30 November 2025</span>
+      </div>
+      <p class="notice">
+        This page is provided for informational purposes only and does not constitute legal advice.
+        Please review and adapt it to match how <strong>Mr. Johnson</strong> actually processes data,
+        and consult a qualified legal professional if needed.
+      </p>
+      <p>
+        This document covers both the <a href="#privacy-policy">Privacy Policy</a> and the
+        <a href="#terms-of-service">Terms of Service</a> for the <strong>Mr. Johnson</strong> mobile application.
+      </p>
     </div>
+
+    <!-- PRIVACY POLICY -->
+    <section id="privacy-policy" class="card">
+      <div class="section-anchor">Section A</div>
+      <h2>Privacy Policy</h2>
+      <p class="meta">
+        This Privacy Policy explains how <strong>Rainyday Apps</strong> (“we”, “us”, or “our”)
+        collects and uses information in connection with the <strong>Mr. Johnson</strong> app (“the App”).
+        We are committed to complying with the General Data Protection Regulation (GDPR) and other applicable privacy laws.
+      </p>
+
+      <h3>1. Data Controller &amp; Contact</h3>
+      <p>
+        The data controller responsible for your personal data in relation to the App is:
+      </p>
+      <p>
+        <strong>Rainyday Apps</strong><br />
+        Email: <a href="mailto:teamrainydays@gmail.com">teamrainydays@gmail.com</a>
+      </p>
+
+      <h3>2. Information We Collect</h3>
+
+      <h4>2.1 Optional Personal Data You Provide</h4>
+      <p>
+        Within the App, you may optionally provide the following personal information:
+      </p>
+      <ul>
+        <li><strong>Name</strong></li>
+        <li><strong>Age</strong></li>
+      </ul>
+      <p>
+        This information is used only to personalise your experience within the App.
+        Providing this information is optional and not required to use the main functionality.
+      </p>
+
+      <h4>2.2 Usage Data &amp; Analytics</h4>
+      <p>
+        We use <strong>Firebase Analytics</strong> to collect anonymised and aggregated usage data.
+        This may include:
+      </p>
+      <ul>
+        <li>App screens you visit and features you use</li>
+        <li>Time spent in the App</li>
+        <li>General device information (such as device model, OS version, language)</li>
+        <li>Approximate, non-precise location (e.g., country or region)</li>
+      </ul>
+      <p>
+        We do <strong>not</strong> collect precise GPS location.
+      </p>
+
+      <h4>2.3 Purchase &amp; Subscription Information</h4>
+      <p>
+        If the App offers in-app purchases or subscriptions, payments are processed by the relevant App Store (e.g. Apple App Store or Google Play Store).
+        We do not receive or store your full payment details.
+      </p>
+      <p>
+        We use <strong>RevenueCat</strong> to manage and verify your purchase or subscription status.
+        RevenueCat receives information related to your purchases (such as product identifiers and subscription status) from the App Store to determine whether premium features should be unlocked.
+      </p>
+
+      <h3>3. How We Use Your Information</h3>
+      <p>We use the information described above for the following purposes:</p>
+      <ul>
+        <li>To operate and provide the core functionality of the App</li>
+        <li>To personalise your experience (for example, using your name or age within the App interface if you choose to provide them)</li>
+        <li>To understand how the App is used so we can improve performance, features and stability</li>
+        <li>To verify and manage in-app purchases and subscriptions</li>
+      </ul>
+      <p>
+        We do <strong>not</strong> use your data for advertising or targeted marketing, and
+        we do <strong>not</strong> sell your personal data.
+      </p>
+
+      <h3>4. Legal Bases for Processing (GDPR)</h3>
+      <p>
+        Under the GDPR, we rely on the following legal bases for processing your personal data:
+      </p>
+      <ul>
+        <li>
+          <strong>Consent</strong> – For optional personal information you provide (such as your name and age).
+          You can choose not to provide this data or remove it by clearing it in the App or uninstalling the App.
+        </li>
+        <li>
+          <strong>Legitimate interests</strong> – For collecting basic analytics data necessary to understand how the App is used and to improve its functionality and security.
+        </li>
+        <li>
+          <strong>Contractual necessity</strong> – For processing necessary to validate purchases and provide you with any premium features that you have paid for.
+        </li>
+      </ul>
+
+      <h3>5. Sharing of Data</h3>
+      <p>
+        We do <strong>not</strong> share your personal data with third parties for their own marketing or advertising purposes.
+      </p>
+      <p>
+        We only share data with the following service providers, strictly for operating the App:
+      </p>
+      <ul>
+        <li>
+          <strong>Firebase Analytics</strong> (Google)<br />
+          Used to collect aggregated analytics data to understand app usage and performance.
+        </li>
+        <li>
+          <strong>RevenueCat</strong><br />
+          Used to validate and manage in-app purchases and subscriptions.
+        </li>
+      </ul>
+      <p>
+        These providers act as data processors or independent controllers under their own privacy terms and are required to process data in accordance
+        with applicable data protection laws.
+      </p>
+
+      <h3>6. International Data Transfers</h3>
+      <p>
+        Due to the global nature of our service providers (such as Firebase and RevenueCat), your data may be processed on servers located outside your country,
+        including outside the European Economic Area (EEA).
+      </p>
+      <p>
+        Where such transfers occur, they are carried out in compliance with GDPR using appropriate safeguards,
+        such as Standard Contractual Clauses (SCCs) or equivalent lawful mechanisms.
+      </p>
+
+      <h3>7. Data Retention</h3>
+      <p>
+        We retain your data only for as long as necessary for the purposes described in this Privacy Policy, or as required by law.
+      </p>
+      <ul>
+        <li>
+          Optional in-app information (such as name and age) is kept only as long as it remains stored in your app instance.
+          You can delete it by clearing the data fields or uninstalling the App.
+        </li>
+        <li>
+          Analytics data is retained by our providers for limited periods to help us understand usage trends and app performance.
+        </li>
+        <li>
+          Purchase-related data is retained as needed to maintain your access to purchased content and comply with App Store and legal requirements.
+        </li>
+      </ul>
+
+      <h3>8. Your Rights (GDPR)</h3>
+      <p>
+        If you are located in the EEA or another jurisdiction with similar rights, you have the following rights regarding your personal data:
+      </p>
+      <ul>
+        <li>The right to access the personal data we hold about you</li>
+        <li>The right to request correction of inaccurate or incomplete data</li>
+        <li>The right to request deletion of your personal data (“right to be forgotten”)</li>
+        <li>The right to restrict or object to certain processing</li>
+        <li>The right to data portability (in certain circumstances)</li>
+        <li>The right to withdraw consent at any time for processing based on consent</li>
+        <li>The right to lodge a complaint with a supervisory authority</li>
+      </ul>
+      <p>
+        To exercise any of these rights, please contact us at
+        <a href="mailto:teamrainydays@gmail.com">teamrainydays@gmail.com</a>.
+      </p>
+
+      <h3>9. Children’s Privacy</h3>
+      <p>
+        The App is not designed to knowingly collect personal data from children under 13 years of age (or the age of digital consent in your country).
+      </p>
+      <p>
+        If you believe that a child has provided personal data to us without appropriate consent, please contact us and we will take steps to delete such information.
+      </p>
+
+      <h3>10. Security</h3>
+      <p>
+        We take reasonable technical and organisational measures to protect your data from loss, misuse and unauthorised access.
+        However, no method of transmission or storage is completely secure, and we cannot guarantee absolute security.
+      </p>
+
+      <h3>11. Changes to This Privacy Policy</h3>
+      <p>
+        We may update this Privacy Policy from time to time.
+        Any changes will be posted on this page with an updated “Last updated” date.
+        Your continued use of the App after changes take effect will constitute your acceptance of the updated Policy.
+      </p>
+
+      <h3>12. Contact</h3>
+      <p>
+        If you have any questions, concerns or requests regarding this Privacy Policy, please contact:
+      </p>
+      <p>
+        <strong>Rainyday Apps</strong><br />
+        Email: <a href="mailto:teamrainydays@gmail.com">teamrainydays@gmail.com</a>
+      </p>
+    </section>
+
+    <!-- TERMS OF SERVICE -->
+    <section id="terms-of-service" class="card">
+      <div class="section-anchor">Section B</div>
+      <h2>Terms of Service</h2>
+      <p class="meta">
+        These Terms of Service (“Terms”) govern your use of the <strong>Mr. Johnson</strong> mobile application (“the App”),
+        provided by <strong>Rainyday Apps</strong> (“we”, “us”, or “our”).
+        By downloading or using the App, you agree to these Terms.
+      </p>
+
+      <h3>1. Acceptance of Terms</h3>
+      <p>
+        By installing, accessing, or using the App, you agree to be bound by these Terms and our
+        <a href="#privacy-policy">Privacy Policy</a>.
+        If you do not agree to these Terms, you must not use the App.
+      </p>
+
+      <h3>2. Licence &amp; Use of the App</h3>
+      <p>
+        We grant you a limited, non-exclusive, non-transferable, revocable licence to use the App on devices that you own or control,
+        strictly in accordance with these Terms and any applicable App Store rules.
+      </p>
+      <p>You agree that you will not:</p>
+      <ul>
+        <li>Use the App for any unlawful or unauthorised purpose</li>
+        <li>Modify, reverse engineer, decompile, or disassemble the App except where permitted by law</li>
+        <li>Interfere with or disrupt the App or servers or networks connected to the App</li>
+        <li>Use the App in a way that could damage, disable, overburden, or impair it</li>
+      </ul>
+
+      <h3>3. User Accounts</h3>
+      <p>
+        The App does <strong>not</strong> require users to create accounts.
+        Any optional information you enter (such as name and age) is for in-app personalisation only and is subject to our Privacy Policy.
+      </p>
+
+      <h3>4. In-App Purchases</h3>
+      <p>
+        The App may offer optional in-app purchases or subscriptions.
+        All such transactions are processed by the relevant App Store (e.g. Apple App Store or Google Play Store) under their terms and conditions.
+      </p>
+      <p>
+        We use <strong>RevenueCat</strong> solely to verify and manage your purchase status (for example, whether you have an active subscription).
+        We do not store your full payment or billing information.
+      </p>
+      <p>
+        All billing inquiries, refunds, and payment issues are handled directly by the App Store where you made the purchase.
+      </p>
+
+      <h3>5. Intellectual Property</h3>
+      <p>
+        All content, features, and functionality of the App—including but not limited to text, graphics, logos, icons, and software code—are the property of
+        <strong>Rainyday Apps</strong> or its licensors and are protected by copyright and other intellectual property laws.
+      </p>
+      <p>
+        You may not copy, reproduce, distribute, or create derivative works from any part of the App without our prior written consent,
+        except as permitted by applicable law.
+      </p>
+
+      <h3>6. Disclaimer of Warranties</h3>
+      <p>
+        The App is provided on an “as is” and “as available” basis, without any warranties of any kind, whether express or implied,
+        including but not limited to warranties of merchantability, fitness for a particular purpose, title, and non-infringement.
+      </p>
+      <p>
+        We do not warrant that:
+      </p>
+      <ul>
+        <li>The App will be uninterrupted, secure, or error-free</li>
+        <li>Any defects or errors will be corrected</li>
+        <li>The App will meet your requirements or expectations</li>
+      </ul>
+      <p>
+        The App is intended for entertainment and/or productivity support and does not provide professional (e.g., medical, legal, financial) advice.
+      </p>
+
+      <h3>7. Limitation of Liability</h3>
+      <p>
+        To the maximum extent permitted by applicable law, <strong>Rainyday Apps</strong> and its affiliates, officers, employees, and partners
+        shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or data,
+        arising out of or in connection with your use of or inability to use the App.
+      </p>
+      <p>
+        In jurisdictions where limitations of liability are not permitted, our liability shall be limited to the greatest extent permitted by law.
+      </p>
+
+      <h3>8. Termination</h3>
+      <p>
+        We may suspend or terminate your access to the App at any time, with or without notice, if we reasonably believe you have violated these Terms
+        or if we decide to discontinue the App.
+      </p>
+      <p>
+        You may stop using the App at any time by uninstalling it from your device.
+      </p>
+
+      <h3>9. Third-Party Services</h3>
+      <p>
+        The App may integrate with third-party services such as Firebase Analytics and RevenueCat.
+        Your use of such services is subject to their respective terms and privacy policies.
+      </p>
+
+      <h3>10. Changes to These Terms</h3>
+      <p>
+        We may update these Terms from time to time.
+        When we do, we will update the “Last updated” date at the top of this page.
+        By continuing to use the App after changes take effect, you agree to be bound by the updated Terms.
+      </p>
+
+      <h3>11. Governing Law</h3>
+      <p>
+        These Terms shall be governed by and construed in accordance with the laws applicable in the jurisdiction where
+        <strong>Rainyday Apps</strong> is established, without regard to its conflict of law provisions.
+      </p>
+
+      <h3>12. Contact</h3>
+      <p>
+        If you have any questions about these Terms, please contact:
+      </p>
+      <p>
+        <strong>Rainyday Apps</strong><br />
+        Email: <a href="mailto:teamrainydays@gmail.com">teamrainydays@gmail.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Rainyday Apps. All rights reserved.
+  </footer>
 </body>
 </html>
